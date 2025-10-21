@@ -1,5 +1,3 @@
-// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include <string>
@@ -39,5 +37,6 @@ int main()
     cout << songName << " is " << minutes << ":" << seconds << " long, and has a bpm of " << bpm << "." << "\n";
     cout << "Additionally, " << songName << " has " << totalBeats << " total beats, and every beat is " << lengthofOneBeat << " seconds long.";
 }
+
 
 
