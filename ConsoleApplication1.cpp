@@ -37,6 +37,7 @@ int main()
     
 
     cout << songName << " is " << minutes << ":" << seconds << " long, and has a bpm of " << bpm << "." << "\n";
-    cout << "Additonally, " << songName << " has " << totalBeats << " total beats, and every beat is " << lengthofOneBeat << " seconds long.";
+    cout << "Additionally, " << songName << " has " << totalBeats << " total beats, and every beat is " << lengthofOneBeat << " seconds long.";
 }
+
 
