@@ -14,6 +14,7 @@ int main()
     double minutes;
     double seconds;
 
+	double songlengthInSeconds;
     double totalBeats;
     double lengthofOneBeat;
 
@@ -39,7 +40,7 @@ int main()
         return -1;
     }
 
-    double songlengthInSeconds = (minutes * 60) + seconds;     //calculate total song length in seconds for the total of beats in the song
+    songlengthInSeconds = (minutes * 60) + seconds;     //calculate total song length in seconds for the total of beats in the song
     totalBeats = (bpm / 60) * songlengthInSeconds;
 
 
@@ -69,7 +70,7 @@ int main()
 
     outFile.close();    //close the output file
 	
-	cout << "\n" << "---EDITING MENU---" << endl;
+	cout << "\n" << "----EDITING MENU----" << endl;
 	cout << "1) edit song name" << endl;
 	cout << "2) edit bpm" << endl;
 	cout << "3) edit song length" << endl;
@@ -77,7 +78,7 @@ int main()
     
 	cin >> choice;
 
-	switch (choice) {           // I know this looks bad, we have not covered loops or functions yet. Justed needed to display I understand switch statements.
+	switch (choice) {           // I know this looks bad, we have not covered loops or functions yet. I just needed to display that I understand switch statements.
         case 1:
         cout << "\n" << "Enter new song name: " << endl;
         cin >> songName;
@@ -95,6 +96,11 @@ int main()
         cout << "\n" << "Enter new bpm: " << endl;
 		cin >> bpm;
 
+        songlengthInSeconds = (minutes * 60) + seconds;
+		totalBeats = (bpm / 60) * songlengthInSeconds;
+
+		lengthofOneBeat = static_cast<double>(60) / bpm;
+
         cout << "Song Name:" << setw(50) << setprecision(0) << fixed << songName << "\n";
         cout << "Minutes in Song:" << setw(44) << minutes << "\n";
         cout << "Seconds in Song:" << setw(44) << seconds << "\n";
@@ -107,6 +113,9 @@ int main()
         case 3:
 			cout << "\n" << "Enter new song length (minutes and seconds): " << endl;
 			cin >> minutes >> seconds;
+
+			songlengthInSeconds = (minutes * 60) + seconds;
+			totalBeats = (bpm / 60) * songlengthInSeconds;
             
             cout << "Song Name:" << setw(50) << setprecision(0) << fixed << songName << "\n";
             cout << "Minutes in Song:" << setw(44) << minutes << "\n";
