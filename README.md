@@ -12,3 +12,10 @@ The program then outputs a message that contains the inputs and some new informa
 -updated the output to have a table style format using setw
 
 -added functionality to save the output of the program as a txt file titled "report.txt"
+
+
+## UPDATE: 11/2/2025
+
+-added more robust input validation using relational operators 
+
+-added a crude menu using the switch statement (loops and functions have not been discussed yet so I could not use them, making this program look messy. This will be fixed next week when we learn loops)
